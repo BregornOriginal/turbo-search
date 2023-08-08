@@ -1,0 +1,14 @@
+{
+  "name": "app",
+  "private": "true",
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2",
+    "@hotwired/turbo-rails": "^7.3.0",
+    "esbuild": "^0.18.20",
+    "sass": "^1.64.2"
+  },
+  "scripts": {
+    "build": "yarn build",
+    "build:css": "yarn build:css"
+  }
+}
