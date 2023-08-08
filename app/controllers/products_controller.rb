@@ -9,6 +9,7 @@ class ProductsController < ApplicationController
     if request.xhr?
       render partial: "products_list", locals: { products: @products }
     else
+      SearchQuery.create(term: params[:search]) if params[:search].present?
       render "index"
     end
   end
