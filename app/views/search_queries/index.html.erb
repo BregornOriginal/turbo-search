@@ -1,0 +1,17 @@
+<h1>Search Query Analytics</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Search Term</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @search_queries.each do |term, count| %>
+      <tr>
+        <td><%= term %></td>
+        <td><%= count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
