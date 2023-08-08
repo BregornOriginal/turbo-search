@@ -1,12 +1,10 @@
-<%= form_tag(products_path, method: :get) do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search Products..." %>
+<%= form_tag(search_products_path, method: :get, remote: true, id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search Products...", id: "search-bar" %>
   <%= submit_tag "Search" %>
 <% end %>
 
 <h1>Products</h1>
 
-<ul>
-  <% @products.each do |product| %>
-    <li><%= product.name %></li>
-  <% end %>
-</ul>
+<div id="products-list">
+  <%= render partial: "products_list", locals: { products: @products } %>
+</div>
