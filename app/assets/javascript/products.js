@@ -11,13 +11,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const delayedSearch = debounce(function () {
     const searchValue = encodeURIComponent(searchInput.value.trim())
-    console.log("Encoded search term:", searchValue);
 
     if (searchValue !== '') {
-      // Clear the typing timer to avoid triggering the search
       clearTimeout(typingTimer);
 
-      // Trigger the search request after 1 second of inactivity
       typingTimer = setTimeout(function () {
         const request = new XMLHttpRequest();
 
@@ -29,15 +26,13 @@ document.addEventListener('DOMContentLoaded', function () {
             request.readyState === XMLHttpRequest.DONE &&
             request.status === 200
           ) {
-            console.log("product", productsListContainer);
             productsListContainer.innerHTML = request.responseText;
           }
         };
 
         request.send();
-      }, 1000); // Delay time in milliseconds (1 second)
+      }, 1000);
     }
-  }, 300); // Debounce delay time in milliseconds (adjust as needed)
-
+  }, 300);
   searchInput.addEventListener('input', delayedSearch);
 });
