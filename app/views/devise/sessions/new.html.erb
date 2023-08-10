@@ -1,6 +1,5 @@
-<h2>Log in</h2>
-
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <section class='form log_in'>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -19,8 +18,11 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: "create_button" %>
+      <% -if devise_mapping.registerable? && controller_name != "registrations" %>
+        <%= link_to "Sign up", new_registration_path(resource_name), class: "create_button" %><br />
+      <% end %>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>
+</section>

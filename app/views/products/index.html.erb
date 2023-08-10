@@ -1,7 +1,11 @@
 <%= form_tag(search_user_products_path(@user), method: :get, remote: true, id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "Search Products...", id: "search-bar" %>
-  <%= hidden_field_tag :user_id, @user.id %>
-  <%= submit_tag "Search" %>
+  <section class='form log_in'>
+    <div class="field">
+      <%= text_field_tag :search, params[:search], class: "field", placeholder: "Search Products...", id: "search-bar" %>
+      <%= hidden_field_tag :user_id, @user.id %>
+    </div>
+    <%= submit_tag "Search", class: "create_button" %>
+  </section>
 <% end %>
 
 <h1>Products</h1>
