@@ -77,6 +77,17 @@ a {
   }
 }
 
+.products-container {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 20px 20px 10px 20px;
+}
+
+.back_button_container {
+  margin: 0 0 60px 40px;
+}
+
 .form {
   display: flex;
   align-items: center;

@@ -5,11 +5,12 @@
       <%= hidden_field_tag :user_id, @user.id %>
     </div>
     <%= submit_tag "Search", class: "create_button" %>
+    <p><%= link_to "Analitycs", user_search_queries_url(@user.id), class: "create_button" %></p>
   </section>
 <% end %>
 
 <h1>Products</h1>
 
-<div id="products-list-container">
+<div class="products-container", id="products-list-container">
   <%= render partial: "products_list", locals: { products: @products } %>
 </div>
