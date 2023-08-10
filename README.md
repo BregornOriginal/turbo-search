@@ -8,6 +8,18 @@ In this application, the user has a list of products. Which are listed and there
 - Searches are saved on the database search_queries table when a `?` it's at the end of the word typed by the user
 - Each query saved on the database it's saved by the user that's logged in, so **do not blend** different queries and show good analytics!
 
+### Here are good examples of how it works the search bar saves queries 
+
+***(1st (random) user searches for)***
+
+- What is 
+- What is a 
+- **What is a good car?**
+
+***Your search engine only records:***
+- **What is a good car?**
+
+
 This app was created with Rails, including Devise for authentication and CanCanCan for authorizations
 
 ## Live Version
