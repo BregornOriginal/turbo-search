@@ -80,7 +80,4 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-  database: turbo_search_production
-  username: turbo_search
-  password: <%= ENV["TURBO_SEARCH_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
