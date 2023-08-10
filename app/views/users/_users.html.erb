@@ -1,0 +1,9 @@
+<section class='grid_container'>
+  <% @users.each do |user| %>
+    <div class='card_container'>
+      <div class='user-info'>
+        <p><%= link_to user.name, user, class: "user-name" %></p>
+      </div>
+    </div>
+  <% end %>
+</section>

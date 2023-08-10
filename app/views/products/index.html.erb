@@ -1,5 +1,6 @@
-<%= form_tag(search_products_path, method: :get, remote: true, id: "search-form") do %>
+<%= form_tag(search_user_products_path(@user), method: :get, remote: true, id: "search-form") do %>
   <%= text_field_tag :search, params[:search], placeholder: "Search Products...", id: "search-bar" %>
+  <%= hidden_field_tag :user_id, @user.id %>
   <%= submit_tag "Search" %>
 <% end %>
 

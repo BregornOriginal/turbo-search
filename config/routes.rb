@@ -4,12 +4,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root "products#index"
-  resources :products do
-    collection do
-      get 'search'
+  root "users#index"
+  resources :users, only: [:index, :show] do
+    resources :products do
+      collection do
+        get 'search'
+      end
     end
+    resources :search_queries, only: :index
   end
-  
-  resources :search_queries, only: :index
 end
