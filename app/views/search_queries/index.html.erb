@@ -1,0 +1,21 @@
+<div class='back_button_container'>
+  <%=link_to 'Go back', user_products_url(@user.id), class: 'create_button back_button' %>
+</div>
+
+<h2>Search Query Analytics</h2>
+<table class ="queries_table">
+  <thead>
+    <tr>
+      <th>Search Term</th>
+      <th>Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @search_queries.each do |term, count| %>
+      <tr>
+        <td><%= term %></td>
+        <td><%= count %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
