@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         request.send();
-      }, 1000);
+      }, 500);
     }
   }, 300);
   searchInput.addEventListener('input', delayedSearch);
