@@ -1,4 +1,4 @@
-import debounce from './debounce'; // Make sure the path is correct
+import debounce from './debounce';
 
 document.addEventListener('DOMContentLoaded', function () {
   const searchForm = document.getElementById('search-form');
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let typingTimer;
 
   const delayedSearch = debounce(function () {
-    const searchValue = encodeURIComponent(searchInput.value.trim())
+    const searchValue = encodeURIComponent(searchInput.value.trim());
 
     if (searchValue !== '') {
       clearTimeout(typingTimer);
