@@ -7,10 +7,6 @@
     "esbuild": "^0.18.20",
     "sass": "^1.64.2"
   },
-  "scripts": {
-    "build": "yarn build",
-    "build:css": "yarn build:css"
-  },
   "devDependencies": {
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",

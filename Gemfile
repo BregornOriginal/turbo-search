@@ -6,6 +6,12 @@ ruby '3.2.0'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.6'
 
+# Add sass for styling
+gem 'sassc'
+
+# use faker to generate random seeds
+gem 'faker'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
@@ -14,6 +20,12 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
+
+# Use cancancan to manage authorizations
+gem 'cancancan'
+
+# Use devise for authentication
+gem 'devise'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
