@@ -6,6 +6,6 @@ class Ability
 
     return unless user.present?
 
-    can :read, SearchQuery, user: user
+    can :read, SearchQuery, user:
   end
 end
