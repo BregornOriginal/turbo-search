@@ -9,6 +9,9 @@ gem 'rails', '~> 7.0.6'
 # Add sass for styling
 gem 'sassc'
 
+# use faker to generate random seeds
+gem 'faker'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 

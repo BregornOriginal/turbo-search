@@ -8,9 +8,13 @@
 
 User.create(name: "First user", surname: "seed", email: "new@new.com", password: "123456", created_at: Date.new, updated_at: Date.new)
 
-Product.create(name: "First product good", description: "this prodcut is good", price: 1, user_id: 1)
-Product.create(name: "First product bad", description: "this prodcut is bad", price: 1, user_id: 1)
-Product.create(name: "Second product good", description: "this prodcut is good", price: 1, user_id: 1)
-Product.create(name: "Second product bad", description: "this prodcut is bad", price: 1, user_id: 1)
-Product.create(name: "Third product good", description: "this prodcut is good", price: 1, user_id: 1)
-Product.create(name: "Third product bad", description: "this prodcut is bad", price: 1, user_id: 1)
+Product.destroy_all
+
+10.times do
+  Product.create(
+    name: Faker::Commerce.product_name,
+    description: Faker::Lorem.paragraph,
+    price: Faker::Commerce.price,
+    user_id: 1,
+  )
+end
